@@ -5,30 +5,26 @@ It provide :
 
 - **Nginx** -  
 - **PHP 8-fpm** -   
-- **NodeJS** (latest) - _67.9MB_ 
+- **NodeJS** (latest) 
 
 It use Alpine container to reduce the weight
 
 ## Requirement
 
 - Docker
-- Docker-compose
+- Docker compose
 
 ## How to use
 
 - Clone this repo at the racine of the Symfony's project
-- Rename **.env.dist** to **.env**
-- Update **.env** with your information (port, database....)..
+- Rename **.env.dist** to **.env** 
 
 - **_!! BE CARREFULL !!_** : Now, with **Symfony 4+**, the **.env** file is now committed !! you should either add **.env** to **.gitignore**  
   or rename this file and change is name inside the **env_file** variable of the **docker-compose.yml** file for each services  
   to avoid sensibles informations like password to be expose on your repository
-
-- Inside **docker-compose.yml** Comment useless service or uncomment the one you need
-- For the **build** container (nodejs), you must have a valid **package.json** file.  
-  In docker-compose.yml **build** section , for **command**, replace the npm command with a command to build the assets (npm run dev, npm run prod, npm run watch...)
-- Run `docker-compose up -d`
-- Go to **"localhost:80"** in a web browser (replace the port with the nginx port you set)
+- Run `docker compose down`
+- Run `docker compose up -d`
+- Go to **"localhost:8080"** in a web browser (replace the port with the nginx port you set)
 - Enjoy
   
 
