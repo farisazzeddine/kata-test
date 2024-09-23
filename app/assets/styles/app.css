@@ -1,0 +1,37 @@
+.card {
+    min-height: 200px;
+  }
+.custom__height__img{
+    max-height: 200px !important;
+}
+.custom__text {
+    position: relative;
+    font-size: 14px;
+    color: black;
+    width: 250px; 
+}
+  
+ 
+  
+.custom__text.ellipsis::after {
+    content: "...";
+    position: absolute;
+    right: -12px; 
+    bottom: 4px;
+}
+  
+.custom__height__descrip{ 
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis; 
+}
+.custom__height__text {
+    width: 200px;  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  
